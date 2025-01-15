@@ -22,16 +22,17 @@ def select(menu, menuname):
     # print(order_pizza)
 
 
-def money_calculator(order, menu, menuname)
+def money_calculator(order, menu, menuname):
     tot_price = 0
     for x in order_pizza.keys():
           price = 0
           if x in pizza_menu.keys():
-              price = price+(order_pizza[x]*pizza_menu[x])
+              price = price+(order_pizza[x] * pizza_menu[x])
           print(f'{x}({pizza_menu[x]}원)x{order_pizza[x]} = {price:, }원')
           tot_price = tot_price +price
 
-      print(f'피자 전체 가격: {tot_price}')
+      print(f'{menu_name} 가격 : {tot_price}')
+      return tot_price
 
 if __name__ == '__main__':
       pizza_menu = {'페페로니 피자': 3000, 
@@ -44,18 +45,9 @@ if __name__ == '__main__':
 
       order_pizza = select(pizza_menu, '피자')
       print(order_pizza)
-    #   order_drink = select(drink_menu)
-    #   print(order_drink)
+      order_drink = select(drink_menu)
+      print(order_drink)
 
-
-      for x in order_pizza.keys():
-          price = 0
-          if x in pizza_menu.keys():
-              price = price+(order_pizza[x]*pizza_menu[x])
-          print(f'{x}({pizza_menu[x]}원)x{order_pizza[x]} = {price:, }원')
-          tot_price = tot_price +price
-
-      print(f'피자 전체 가격: {tot_price}')
 
 
 
